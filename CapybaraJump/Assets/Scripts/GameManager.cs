@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        CoinCalculator(0);
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Finish"))
+        {
+            Debug.Log("gameover");
+            CoinCalculator(100);
+            Debug.Log(PlayerPrefs.GetInt("coinn"));
+
+        }
+    }
+    public void CoinCalculator (int coin)
+    {
+        if (PlayerPrefs.HasKey("coinn"))
+        {
+            int oldCoin = PlayerPrefs.GetInt("coinn");
+            PlayerPrefs.SetInt("coinn", oldCoin + coin);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("coinn", 0);
+        }
     }
 }
