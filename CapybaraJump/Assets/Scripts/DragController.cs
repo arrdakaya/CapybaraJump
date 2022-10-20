@@ -39,7 +39,7 @@ public class DragController : MonoBehaviour
         
         if (isDrag)
         {
-            Drag();
+             Drag();
         }
         else
         {

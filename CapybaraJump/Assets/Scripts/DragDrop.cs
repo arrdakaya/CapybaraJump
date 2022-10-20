@@ -18,23 +18,29 @@ public class DragDrop : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (movementDestination.HasValue)
-        {
-            if (isDragging)
+
+            if (movementDestination.HasValue)
             {
-                movementDestination = null;
-                return;
+           
+                if (isDragging)
+                {
+                    movementDestination = null;
+                    return;
+                }
+            
+                if (transform.position == movementDestination)
+                {
+                    gameObject.layer = Layer.Default;
+                    movementDestination = null;
+                }
+            
+               
+                else
+                {
+                    transform.position = Vector3.Lerp(transform.position, movementDestination.Value, movementTime * Time.fixedDeltaTime);
+                }
+            
             }
-            if(transform.position == movementDestination)
-            {
-                gameObject.layer = Layer.Default;
-                movementDestination = null;
-            }
-            else
-            {
-                transform.position = Vector3.Lerp(transform.position, movementDestination.Value, movementTime * Time.fixedDeltaTime);
-            }
-        }
 
     }
 

@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Ball : MonoBehaviour
 {
+    private SpriteRenderer sprite;
+    private Animator anim;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Rigidbody2D hook;
     private float releaseTime = 0.1f;
@@ -12,7 +14,16 @@ public class Ball : MonoBehaviour
     private bool isDrag = false;
     public GameObject capybara;
     public Vector2 capybaraPos;
+    public GameObject hookObject;
+    public float hookPos;
+    [SerializeField] private UIManager uimanager;
 
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
+        
+    }
     private void Update()
     {
         
@@ -32,10 +43,19 @@ public class Ball : MonoBehaviour
                 }
                 if (touch.phase == TouchPhase.Moved)
                 {
+               
                     if (isDrag)
-                    {
-                        rb.isKinematic = true;
+                {
+                    rb.isKinematic = true;
                         capybaraPos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+                    if(capybaraPos.x > hookObject.transform.position.x)
+                    {
+                        sprite.flipX = true;
+                    }
+                    else
+                    {
+                        sprite.flipX = false;
+                    }
                         if(Vector3.Distance(capybaraPos,hook.position) > 2f)
                         {
                             rb.position = hook.position + (capybaraPos - hook.position).normalized * 2f;
@@ -50,17 +70,13 @@ public class Ball : MonoBehaviour
             if(isDrag && (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended))
         {
                 StartCoroutine("Release");
-
+                anim.SetTrigger("jump");
                 rb.isKinematic = false;
 
                 isDrag = false; 
                 return;
             }
-            //if (touch.phase == TouchPhase.Ended)
-            //    {
-               
-                    
-            //    }
+           
             
 
         }
@@ -76,12 +92,13 @@ public class Ball : MonoBehaviour
         if(nextCapybara != null)
         {
             nextCapybara.SetActive(true);
-
+          
         }
         else
         {
             Enemy.EnemiesAlive = 0;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            uimanager.RetryScreen();
+            
         }
     }
 }

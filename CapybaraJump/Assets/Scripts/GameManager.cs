@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private UIManager uimanager;
+
+
     private void Start()
     {
         CoinCalculator(0);
@@ -13,10 +16,10 @@ public class GameManager : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Finish"))
         {
             Debug.Log("gameover");
-            CoinCalculator(100);
-            Debug.Log(PlayerPrefs.GetInt("coinn"));
-
+            CoinCalculator(5);
+            uimanager.FinishScreen();   
         }
+        
     }
     public void CoinCalculator (int coin)
     {
@@ -30,4 +33,5 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("coinn", 0);
         }
     }
+    
 }
