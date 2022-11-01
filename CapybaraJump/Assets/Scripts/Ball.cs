@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Ball : MonoBehaviour
 {
+    [SerializeField] private SkinManager skinManager;
     private SpriteRenderer sprite;
     private Animator anim;
     [SerializeField] private Rigidbody2D rb;
@@ -16,15 +17,16 @@ public class Ball : MonoBehaviour
     public Vector2 capybaraPos;
     public GameObject hookObject;
     public float hookPos;
-    [SerializeField] private UIManager uimanager;
+   
 
-    private void Awake()
+     void Start()
     {
+        
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
-        
+        GetComponent<SpriteRenderer>().sprite = skinManager.GetSelectedSkin().sprite;
     }
-    private void Update()
+     void Update()
     {
         
             if (Input.touchCount > 0)
@@ -70,7 +72,9 @@ public class Ball : MonoBehaviour
             if(isDrag && (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended))
         {
                 StartCoroutine("Release");
-                anim.SetTrigger("jump");
+                //anim.SetTrigger("jump");
+                GetComponent<SpriteRenderer>().sprite = skinManager.GetSelectedSkin().jumpSprite;
+
                 rb.isKinematic = false;
 
                 isDrag = false; 
@@ -97,7 +101,7 @@ public class Ball : MonoBehaviour
         else
         {
             Enemy.EnemiesAlive = 0;
-            uimanager.RetryScreen();
+            
             
         }
     }

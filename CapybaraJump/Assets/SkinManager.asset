@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1678f3879ed26843b5b1cdd7b37fea9, type: 3}
+  m_Name: SkinManager
+  m_EditorClassIdentifier: 
+  skins:
+  - cost: 0
+    sprite: {fileID: 21300000, guid: 58c63e022069f1e4988d42ba387b5615, type: 3}
+    jumpSprite: {fileID: 21300000, guid: d478a5251cbe85944bb0b96ae1f66fef, type: 3}
+  - cost: 5
+    sprite: {fileID: -1040853174, guid: bb96a0d3ccf697f4b8ca528978956b7a, type: 3}
+    jumpSprite: {fileID: -430106003, guid: bb96a0d3ccf697f4b8ca528978956b7a, type: 3}
+  - cost: 10
+    sprite: {fileID: -1536020903, guid: b4d3a2b41c8f0d84fb7abbecbd98eb89, type: 3}
+    jumpSprite: {fileID: -606720988, guid: b4d3a2b41c8f0d84fb7abbecbd98eb89, type: 3}
+  - cost: 15
+    sprite: {fileID: 173895463, guid: ea07ba98cf1a06a4b897df6792492330, type: 3}
+    jumpSprite: {fileID: 524386677, guid: ea07ba98cf1a06a4b897df6792492330, type: 3}
+  - cost: 20
+    sprite: {fileID: 860582080, guid: 53ba7e09de82f5e4bac60acb7c8fe991, type: 3}
+    jumpSprite: {fileID: 257936924, guid: 53ba7e09de82f5e4bac60acb7c8fe991, type: 3}

@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        CoinCalculator(0);
+        CoinCalculator(50);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -23,14 +23,14 @@ public class GameManager : MonoBehaviour
     }
     public void CoinCalculator (int coin)
     {
-        if (PlayerPrefs.HasKey("coinn"))
+        if (PlayerPrefs.HasKey("Coins"))
         {
-            int oldCoin = PlayerPrefs.GetInt("coinn");
-            PlayerPrefs.SetInt("coinn", oldCoin + coin);
+            int oldCoin = PlayerPrefs.GetInt("Coins");
+            PlayerPrefs.SetInt("Coins", oldCoin + coin);
         }
         else
         {
-            PlayerPrefs.SetInt("coinn", 0);
+            PlayerPrefs.SetInt("Coins", 0);
         }
     }
     

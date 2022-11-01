@@ -13,6 +13,8 @@ public class NextLevelManager : MonoBehaviour
     {
         buildIndex = SceneManager.GetActiveScene().buildIndex;
         levelText.text = "Level " + buildIndex.ToString() + " Succeeded";
+
+        
     }
 
     // Update is called once per frame
