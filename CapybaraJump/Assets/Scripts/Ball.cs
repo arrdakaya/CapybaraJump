@@ -17,6 +17,10 @@ public class Ball : MonoBehaviour
     public Vector2 capybaraPos;
     public GameObject hookObject;
     public float hookPos;
+    public bool isShoot ;
+    public Transform playerPos;
+    public Transform deneme;
+    GameObject capy;
    
 
      void Start()
@@ -28,7 +32,6 @@ public class Ball : MonoBehaviour
     }
      void Update()
     {
-        
             if (Input.touchCount > 0)
             {
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position), Vector2.zero);
@@ -70,7 +73,8 @@ public class Ball : MonoBehaviour
                     }
                 }
             if(isDrag && (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended))
-        {
+            {
+                isShoot = true;
                 StartCoroutine("Release");
                 //anim.SetTrigger("jump");
                 GetComponent<SpriteRenderer>().sprite = skinManager.GetSelectedSkin().jumpSprite;
@@ -79,31 +83,37 @@ public class Ball : MonoBehaviour
 
                 isDrag = false; 
                 return;
+                
             }
-           
-            
 
         }
-   
+
     }
 
     IEnumerator Release()
     {
+        Debug.Log(isShoot);
         yield return new WaitForSeconds(releaseTime);
         GetComponent<SpringJoint2D>().enabled = false;
         this.enabled = false;
         yield return new WaitForSeconds(2f);
-        if(nextCapybara != null)
-        {
-            nextCapybara.SetActive(true);
-          
-        }
-        else
+        Destroy(capybara);
+
+        GetComponent<SpringJoint2D>().enabled = true;
+        this.enabled = true;
+        GetComponent<BoxCollider2D>().enabled = true;
+        capy =(GameObject)Instantiate(capybara, playerPos.position, Quaternion.identity,deneme);
+        capy.name = "Player";
+        if (nextCapybara == null)
         {
             Enemy.EnemiesAlive = 0;
-            
-            
+
+            //nextCapybara.SetActive(true);
+
         }
+       
     }
+   
+    
 }
 
