@@ -5,10 +5,7 @@ using UnityEngine;
 public class PlayerTeleport : MonoBehaviour
 {
     private GameObject currentTeleporter;
-    // Start is called before the first frame update
-   
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -16,6 +13,8 @@ public class PlayerTeleport : MonoBehaviour
             {
                 transform.position = currentTeleporter.GetComponent<Teleport>().GetDestination().position;
             }
+        
+            
         
        
     }
@@ -30,7 +29,10 @@ public class PlayerTeleport : MonoBehaviour
     {
         if (collision.CompareTag("Teleporter"))
         {
-            currentTeleporter = null;
+            if(collision.gameObject == currentTeleporter)
+            {
+                currentTeleporter = null;
+            }
         }
     }
 }

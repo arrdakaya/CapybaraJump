@@ -26,7 +26,7 @@ public class NextLevelManager : MonoBehaviour
             PlayerPrefs.SetInt("SaveIndex", buildIndex);
 
         }
-        if (buildIndex == 3)
+        if (buildIndex == 6)
         {
             SceneManager.LoadScene(0);
         }

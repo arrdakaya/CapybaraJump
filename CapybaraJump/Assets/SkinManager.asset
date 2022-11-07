@@ -28,3 +28,18 @@ MonoBehaviour:
   - cost: 20
     sprite: {fileID: 860582080, guid: 53ba7e09de82f5e4bac60acb7c8fe991, type: 3}
     jumpSprite: {fileID: 257936924, guid: 53ba7e09de82f5e4bac60acb7c8fe991, type: 3}
+  - cost: 20
+    sprite: {fileID: -893507709, guid: d251660ae1da04747a19735b5a292783, type: 3}
+    jumpSprite: {fileID: 31176027, guid: d251660ae1da04747a19735b5a292783, type: 3}
+  - cost: 20
+    sprite: {fileID: 1196378579, guid: 743d84f6f2cb0544ba8376819046f883, type: 3}
+    jumpSprite: {fileID: -1835236703, guid: 743d84f6f2cb0544ba8376819046f883, type: 3}
+  - cost: 20
+    sprite: {fileID: 254805663, guid: 9b5476ad76092db4faa295f2e0854962, type: 3}
+    jumpSprite: {fileID: -1696524612, guid: 9b5476ad76092db4faa295f2e0854962, type: 3}
+  - cost: 20
+    sprite: {fileID: -537402860, guid: b6a7b42576005aa478cb643df115994f, type: 3}
+    jumpSprite: {fileID: 203497779, guid: b6a7b42576005aa478cb643df115994f, type: 3}
+  - cost: 20
+    sprite: {fileID: 382425204, guid: aaa124c6164726f47ae5f199788ccfdd, type: 3}
+    jumpSprite: {fileID: -1141684933, guid: aaa124c6164726f47ae5f199788ccfdd, type: 3}
