@@ -8,6 +8,7 @@ TagManager:
   - Slot
   - Teleporter
   - NotValid
+  - Ground
   layers:
   - Default
   - TransparentFX

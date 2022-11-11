@@ -129,12 +129,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Skeltonbara_3
+      name: SkeltonBara_3
       rect:
         serializedVersion: 2
-        x: 412
+        x: 413
         y: 0
-        width: 448
+        width: 447
         height: 260
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8eae37e1c2cf05c4787be9bc44fd3eb5
-      internalID: 203497779
+      spriteID: 5a9cf31226ba78e4693bf9ddcca689e3
+      internalID: -631672399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeltonbara_4
+      name: SkeltonBara_4
       rect:
         serializedVersion: 2
         x: 12
         y: 5
         width: 399
-        height: 230
+        height: 229
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,8 +164,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ffceaef01149584e915e729f7f0d5b5
-      internalID: -537402860
+      spriteID: 9bd0c9f3e9589a0478c9fe2b8848d0d9
+      internalID: -1835725232
       vertices: []
       indices: 
       edges: []
@@ -181,14 +181,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Skeltonbara_2: -557262681
-      Skeltonbara_4: -537402860
-      Skeltonbara_6: 2057555649
-      Skeltonbara_0: -1689039160
-      Skeltonbara_5: 366172321
-      Skeltonbara_1: -1471242047
-      Skeltonbara_3: 203497779
-      Skeltonbara_7: 938139101
+      SkeltonBara_4: -1835725232
+      SkeltonBara_2: 1775199476
+      SkeltonBara_6: 506450512
+      SkeltonBara_5: 2056933223
+      SkeltonBara_0: -1633499350
+      SkeltonBara_3: -631672399
+      SkeltonBara_7: -1347945290
+      SkeltonBara_1: -1207986076
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

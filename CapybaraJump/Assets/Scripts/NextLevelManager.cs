@@ -20,13 +20,14 @@ public class NextLevelManager : MonoBehaviour
     // Update is called once per frame
     public void NextLevel()
     {
+       
         int saveIndex = PlayerPrefs.GetInt("SaveIndex");
         if (buildIndex > saveIndex)
         {
             PlayerPrefs.SetInt("SaveIndex", buildIndex);
 
         }
-        if (buildIndex == 6)
+        if (buildIndex == 8)
         {
             SceneManager.LoadScene(0);
         }

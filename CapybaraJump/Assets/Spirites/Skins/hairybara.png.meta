@@ -129,43 +129,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hairybara_0
+      name: HairyBara_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 6
-        width: 397
-        height: 249
+        x: 12
+        y: 4
+        width: 399
+        height: 253
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 193fff95f499f1e43bc976041fcfcd14
-      internalID: 382425204
+      spriteID: 8ee41d2642fa166459617f04cc5c1fe3
+      internalID: -562656743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hairybara_1
+      name: HairyBara_1
       rect:
         serializedVersion: 2
-        x: 413
-        y: 1
-        width: 447
-        height: 259
+        x: 416
+        y: 0
+        width: 444
+        height: 260
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0986eb2b050505249b09197ced8b46e2
-      internalID: -1141684933
+      spriteID: 219533d25ba58b649930696153cc301f
+      internalID: -1371829385
       vertices: []
       indices: 
       edges: []
@@ -181,8 +181,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      hairybara_1: -1141684933
-      hairybara_0: 382425204
+      HairyBara_0: -562656743
+      HairyBara_1: -1371829385
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

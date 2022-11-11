@@ -129,43 +129,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Robobara_0
+      name: RoboBara_0
       rect:
         serializedVersion: 2
-        x: 38
-        y: 7
-        width: 395
-        height: 234
+        x: 17
+        y: 5
+        width: 392
+        height: 232
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aac7a75a79c02e0419b6aa33fb862ec4
-      internalID: 254805663
+      spriteID: 578f3effb57592e4682ca3adcf4333cd
+      internalID: 202551208
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Robobara_2
+      name: RoboBara_3
       rect:
         serializedVersion: 2
-        x: 437
+        x: 419
         y: 0
-        width: 423
-        height: 260
+        width: 441
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bdfc731e7238904d86342de0bbb8c8e
-      internalID: -1696524612
+      spriteID: 4c638416f2db38c478830b344a7437c5
+      internalID: -734133348
       vertices: []
       indices: 
       edges: []
@@ -181,10 +181,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Robobara_3: -969374678
-      Robobara_2: -1696524612
-      Robobara_0: 254805663
-      Robobara_1: 538507445
+      RoboBara_3: -734133348
+      RoboBara_0: 202551208
+      RoboBara_2: 1977122750
+      RoboBara_1: 1823931721
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

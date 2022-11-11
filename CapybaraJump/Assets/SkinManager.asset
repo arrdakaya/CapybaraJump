@@ -14,32 +14,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skins:
   - cost: 0
-    sprite: {fileID: 21300000, guid: 58c63e022069f1e4988d42ba387b5615, type: 3}
-    jumpSprite: {fileID: 21300000, guid: d478a5251cbe85944bb0b96ae1f66fef, type: 3}
+    sprite: {fileID: 382941160, guid: 9d1af0042eba4bd46b19630d98b9431e, type: 3}
+    jumpSprite: {fileID: 1544542185, guid: 9d1af0042eba4bd46b19630d98b9431e, type: 3}
   - cost: 5
-    sprite: {fileID: -1040853174, guid: bb96a0d3ccf697f4b8ca528978956b7a, type: 3}
-    jumpSprite: {fileID: -430106003, guid: bb96a0d3ccf697f4b8ca528978956b7a, type: 3}
+    sprite: {fileID: 1647555763, guid: adb5b7abd97309b40b90bab1797b4233, type: 3}
+    jumpSprite: {fileID: 1944769132, guid: adb5b7abd97309b40b90bab1797b4233, type: 3}
   - cost: 10
-    sprite: {fileID: -1536020903, guid: b4d3a2b41c8f0d84fb7abbecbd98eb89, type: 3}
-    jumpSprite: {fileID: -606720988, guid: b4d3a2b41c8f0d84fb7abbecbd98eb89, type: 3}
+    sprite: {fileID: 830946511, guid: 8147e522e232d1b42ac8b0d45d47db52, type: 3}
+    jumpSprite: {fileID: 1870825942, guid: 8147e522e232d1b42ac8b0d45d47db52, type: 3}
   - cost: 15
-    sprite: {fileID: 173895463, guid: ea07ba98cf1a06a4b897df6792492330, type: 3}
-    jumpSprite: {fileID: 524386677, guid: ea07ba98cf1a06a4b897df6792492330, type: 3}
+    sprite: {fileID: -562656743, guid: aaa124c6164726f47ae5f199788ccfdd, type: 3}
+    jumpSprite: {fileID: -1371829385, guid: aaa124c6164726f47ae5f199788ccfdd, type: 3}
   - cost: 20
-    sprite: {fileID: 860582080, guid: 53ba7e09de82f5e4bac60acb7c8fe991, type: 3}
-    jumpSprite: {fileID: 257936924, guid: 53ba7e09de82f5e4bac60acb7c8fe991, type: 3}
+    sprite: {fileID: -1700382083, guid: 59bc06449469bb842b74ac831a041e47, type: 3}
+    jumpSprite: {fileID: 1937517107, guid: 59bc06449469bb842b74ac831a041e47, type: 3}
   - cost: 20
-    sprite: {fileID: -893507709, guid: d251660ae1da04747a19735b5a292783, type: 3}
-    jumpSprite: {fileID: 31176027, guid: d251660ae1da04747a19735b5a292783, type: 3}
+    sprite: {fileID: -1796825499, guid: 89677eb19eed0f34092c588a226b47ff, type: 3}
+    jumpSprite: {fileID: -892373851, guid: 89677eb19eed0f34092c588a226b47ff, type: 3}
   - cost: 20
-    sprite: {fileID: 1196378579, guid: 743d84f6f2cb0544ba8376819046f883, type: 3}
-    jumpSprite: {fileID: -1835236703, guid: 743d84f6f2cb0544ba8376819046f883, type: 3}
+    sprite: {fileID: 1507372520, guid: 3fbafe876c4b41047bb01d7a07cbbfd7, type: 3}
+    jumpSprite: {fileID: -1816226450, guid: 3fbafe876c4b41047bb01d7a07cbbfd7, type: 3}
   - cost: 20
-    sprite: {fileID: 254805663, guid: 9b5476ad76092db4faa295f2e0854962, type: 3}
-    jumpSprite: {fileID: -1696524612, guid: 9b5476ad76092db4faa295f2e0854962, type: 3}
+    sprite: {fileID: 652268676, guid: 798798d471c098c4ca40409c59224fb4, type: 3}
+    jumpSprite: {fileID: -1125852963, guid: 798798d471c098c4ca40409c59224fb4, type: 3}
   - cost: 20
-    sprite: {fileID: -537402860, guid: b6a7b42576005aa478cb643df115994f, type: 3}
-    jumpSprite: {fileID: 203497779, guid: b6a7b42576005aa478cb643df115994f, type: 3}
+    sprite: {fileID: -2036225555, guid: 9b7f61410f880f849a6b79f3bfb61aef, type: 3}
+    jumpSprite: {fileID: 225184330, guid: 9b7f61410f880f849a6b79f3bfb61aef, type: 3}
   - cost: 20
-    sprite: {fileID: 382425204, guid: aaa124c6164726f47ae5f199788ccfdd, type: 3}
-    jumpSprite: {fileID: -1141684933, guid: aaa124c6164726f47ae5f199788ccfdd, type: 3}
+    sprite: {fileID: -1509192932, guid: 1ce062b498b5b6e408e6c14ebb578361, type: 3}
+    jumpSprite: {fileID: -1569258543, guid: 1ce062b498b5b6e408e6c14ebb578361, type: 3}
+  - cost: 20
+    sprite: {fileID: -2049240289, guid: 9c4f43de56c7f2041803ed5e00b1ae71, type: 3}
+    jumpSprite: {fileID: -53154136, guid: 9c4f43de56c7f2041803ed5e00b1ae71, type: 3}
+  - cost: 20
+    sprite: {fileID: -491385880, guid: d4aae663963575643bdfd3e5acc19b25, type: 3}
+    jumpSprite: {fileID: -1748169700, guid: d4aae663963575643bdfd3e5acc19b25, type: 3}
+  - cost: 20
+    sprite: {fileID: -1835725232, guid: b6a7b42576005aa478cb643df115994f, type: 3}
+    jumpSprite: {fileID: -631672399, guid: b6a7b42576005aa478cb643df115994f, type: 3}
+  - cost: 20
+    sprite: {fileID: 202551208, guid: 9b5476ad76092db4faa295f2e0854962, type: 3}
+    jumpSprite: {fileID: -734133348, guid: 9b5476ad76092db4faa295f2e0854962, type: 3}
+  - cost: 20
+    sprite: {fileID: -1380744141, guid: 90930844993f5c447b6bac123bd9e120, type: 3}
+    jumpSprite: {fileID: 1722792255, guid: 90930844993f5c447b6bac123bd9e120, type: 3}

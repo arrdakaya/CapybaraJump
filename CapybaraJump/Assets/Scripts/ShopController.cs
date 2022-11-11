@@ -13,11 +13,14 @@ public class ShopController : MonoBehaviour
 
     void Update()
     {
-        coinsText.text = "Coins: " + PlayerPrefs.GetInt("Coins");
+        coinsText.text = "" + PlayerPrefs.GetInt("Coins");
         selectedSkin.sprite = skinManager.GetSelectedSkin().sprite;
     }
 
     public void LoadMenu() => SceneManager.LoadScene("MainMenuScene");
-    public void PlayGame() => SceneManager.LoadScene("Level_1");
+    public void PlayGame()
+    {
+        SceneManager.LoadScene("LevelSelect");
+    }
 
 }

@@ -8,10 +8,18 @@ using Unity.VisualScripting;
 
 public class InterstitialAdScript : MonoBehaviour
 {
+    public static InterstitialAdScript _instance;   
     private InterstitialAd interstitialAd;
     public string AndroidInterstitialAd;
     public string IosInterstitialAd;
     string AdId;
+      void Awake()
+    {
+        if (_instance == null)
+        {
+            _instance = this;
+        }
+    }
     void Start()
     {
         RequestInterstitial();
