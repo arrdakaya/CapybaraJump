@@ -9,26 +9,18 @@ using Unity.VisualScripting;
 public class InterstitialAdScript : MonoBehaviour
 {
     public static InterstitialAdScript _instance;   
-    private InterstitialAd interstitialAd;
-    public string AndroidInterstitialAd;
-    public string IosInterstitialAd;
+    private InterstitialAd interstitial;
     string AdId;
-      void Awake()
-    {
-        if (_instance == null)
-        {
-            _instance = this;
-        }
-    }
+    
     void Start()
     {
         RequestInterstitial();
     }
-
-    void RequestInterstitial()
+    //ca-app-pub-3625967446430447/9637260483
+    public void RequestInterstitial()
     {
 #if UNITY_ANDROID
-        AdId = AndroidInterstitialAd;
+        AdId = "ca-app-pub-3940256099942544/5224354917";
 #elif UNITY_IPHONE
         AdId = IosInterstitialAd;
     
@@ -36,20 +28,24 @@ public class InterstitialAdScript : MonoBehaviour
         AdId = "Platform not recognized";
 #endif
 
-        interstitialAd = new InterstitialAd(AdId);
-        interstitialAd.OnAdLoaded += isloaded;
-        interstitialAd.OnAdFailedToLoad += loaderror;
-        interstitialAd.OnAdOpening += opened;
-        interstitialAd.OnAdClosed += closed;
+        interstitial = new InterstitialAd(AdId);
+        // Called when an ad request has successfully loaded.
+        this.interstitial.OnAdLoaded += HandleOnAdLoaded;
+        // Called when an ad request failed to load.
+        this.interstitial.OnAdFailedToLoad += HandleOnAdFailedToLoad;
+        // Called when an ad is shown.
+        this.interstitial.OnAdOpening += HandleOnAdOpening;
+        // Called when the ad is closed.
+        this.interstitial.OnAdClosed += HandleOnAdClosed;
 
         AdRequest request = new AdRequest.Builder().Build();
-        interstitialAd.LoadAd(request);
+        this.interstitial.LoadAd(request);
     }
-        public void GameOver()
+        public void ShowInterstitial()
     {
-        if (interstitialAd.IsLoaded())
+        if (interstitial.IsLoaded())
         {
-            interstitialAd.Show();
+            interstitial.Show();
         }
         else
         {
@@ -57,26 +53,26 @@ public class InterstitialAdScript : MonoBehaviour
 
         }
     }
-    public void isloaded(object sender,EventArgs args)
+    public void HandleOnAdLoaded(object sender, EventArgs args)
     {
-        MonoBehaviour.print("isloaded event receiver");
+        MonoBehaviour.print("HandleAdLoaded event received");
     }
-    public void loaderror(object sender, AdFailedToLoadEventArgs args)
-    {
-        MonoBehaviour.print("loaderror event receiver");
-        RequestInterstitial();
 
-    }
-    public void opened(object sender, EventArgs args)
+    public void HandleOnAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
     {
-        MonoBehaviour.print("opened event receiver");
+        MonoBehaviour.print("HandleFailedToReceiveAd event received with message: "
+                            );
     }
-    public void closed(object sender, EventArgs args)
-    {
-        MonoBehaviour.print("closed event receiver");
-        RequestInterstitial();
 
+    public void HandleOnAdOpening(object sender, EventArgs args)
+    {
+        MonoBehaviour.print("HandleAdOpening event received");
     }
-    
+
+    public void HandleOnAdClosed(object sender, EventArgs args)
+    {
+        MonoBehaviour.print("HandleAdClosed event received");
+    }
+
 
 }

@@ -9,8 +9,12 @@ public class UIManager : MonoBehaviour
     public static UIManager _instance;
     public GameObject finishScreen;
     public GameObject retryScreen;
+    public GameObject coin;
+    public GameObject giftButton;
+    public GameObject retryText;
+    public GameObject coin1;
+    public GameObject earnedText;
     private bool isFinish;
-    // Start is called before the first frame update
 
     void Awake()
     {
@@ -21,8 +25,8 @@ public class UIManager : MonoBehaviour
     }
     public void FinishScreen()
     {
-        finishScreen.SetActive(true);
-        isFinish = true;
+        
+        StartCoroutine("splash");
     }
     public void RetryScreen()
     {
@@ -43,5 +47,20 @@ public class UIManager : MonoBehaviour
 
 
         }
+    }
+    IEnumerator splash()
+    {
+        finishScreen.SetActive(true);
+        isFinish = true;
+        yield return new WaitForSeconds(0.8f);
+        Time.timeScale = 0;
+    }
+    public void AfterRewardButton()
+    {
+        coin.SetActive(false);
+        giftButton.SetActive(false);
+        retryText.SetActive(false);
+        coin1.SetActive(true);
+        earnedText.SetActive(true);
     }
 }

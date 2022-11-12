@@ -1,10 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
+    public static ButtonManager _instance;
+
+    void Awake()
+    {
+        if (_instance == null)
+        {
+            _instance = this;
+        }
+    }
     public void ContButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

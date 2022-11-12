@@ -9,6 +9,7 @@ TagManager:
   - Teleporter
   - NotValid
   - Ground
+  - Splash
   layers:
   - Default
   - TransparentFX

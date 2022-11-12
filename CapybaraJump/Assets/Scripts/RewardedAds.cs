@@ -7,73 +7,86 @@ using UnityEngine;
 
 public class RewardedAds : MonoBehaviour
 {
+    //ca-app-pub-3625967446430447/5463115715 benim id
+    private RewardedAd rewardedAd;
+   
+    string adUnitId;
 
-    private RewardedAd adRewarded;
-    public string AndroidRewardedAd;
-    public string IosRewardedAd;
-    string AdId;
-    void Start()
-    {
-        RequestRewardedAd();
-    }
-
-    void RequestRewardedAd()
+    
+    public void RequestRewardedAd()
     {
 #if UNITY_ANDROID
-        AdId = AndroidRewardedAd;
+        adUnitId = "ca-app-pub-3940256099942544/5224354917";
 #elif UNITY_IPHONE
-        AdId = IosRewardedAd;
+        adUnitId = IosRewardedAd;
 #else
-        AdId = "Platform not recognized";
+        adUnitId = "Platform not recognized";
 #endif
 
-        adRewarded = new RewardedAd(AdId);
+        this.rewardedAd = new RewardedAd(adUnitId);
 
-        adRewarded.OnAdLoaded += isloaded;
-        adRewarded.OnAdFailedToLoad += loaderror;
-        adRewarded.OnAdOpening += opened;
-        adRewarded.OnAdFailedToShow += isOpen;
-        adRewarded.OnUserEarnedReward += isUserWatch;
-        adRewarded.OnAdClosed += closed;
-
+        // Create an empty ad request.
         AdRequest request = new AdRequest.Builder().Build();
-        adRewarded.LoadAd(request);
-    }
+        // Load the rewarded ad with the request.
+        this.rewardedAd.LoadAd(request);
 
-    public void isloaded(object sender, EventArgs args)
-    {
-        MonoBehaviour.print("isloaded event receiver");
-    }
-    public void loaderror(object sender, AdFailedToLoadEventArgs args)
-    {
-        MonoBehaviour.print("loaderror event receiver");
-
-    }
-    public void opened(object sender, EventArgs args)
-    {
-        MonoBehaviour.print("opened event receiver");
-    }
-    public void isOpen(object sender, AdErrorEventArgs args)
-    {
-        MonoBehaviour.print("isOpen event receiver");
-    }
-    public void closed(object sender, EventArgs args)
-    {
-        MonoBehaviour.print("closed event receiver");
+        // Called when an ad request has successfully loaded.
+        this.rewardedAd.OnAdLoaded += HandleRewardedAdLoaded;
+        // Called when an ad request failed to load.
+        this.rewardedAd.OnAdFailedToLoad += HandleRewardedAdFailedToLoad;
+        // Called when an ad is shown.
+        this.rewardedAd.OnAdOpening += HandleRewardedAdOpening;
+        // Called when an ad request failed to show.
+        this.rewardedAd.OnAdFailedToShow += HandleRewardedAdFailedToShow;
+        // Called when the user should be rewarded for interacting with the ad.
+        this.rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
+        // Called when the ad is closed.
+        this.rewardedAd.OnAdClosed += HandleRewardedAdClosed;
 
     }
-    public void isUserWatch(object sender, Reward args)
+    public void HandleRewardedAdLoaded(object sender, EventArgs args)
+    {
+        MonoBehaviour.print("HandleRewardedAdLoaded event received");
+    }
+
+    public void HandleRewardedAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
+    {
+        MonoBehaviour.print(
+            "HandleRewardedAdFailedToLoad event received with message: "
+                             );
+    }
+
+    public void HandleRewardedAdOpening(object sender, EventArgs args)
+    {
+        MonoBehaviour.print("HandleRewardedAdOpening event received");
+    }
+
+    public void HandleRewardedAdFailedToShow(object sender, AdErrorEventArgs args)
+    {
+        MonoBehaviour.print(
+            "HandleRewardedAdFailedToShow event received with message: "
+                             );
+    }
+
+    public void HandleRewardedAdClosed(object sender, EventArgs args)
+    {
+        MonoBehaviour.print("HandleRewardedAdClosed event received");
+    }
+
+    public void HandleUserEarnedReward(object sender, Reward args)
     {
         string type = args.Type;
         double amount = args.Amount;
-        Debug.Log("Ödül Türü:" + type + "miktar:" + amount);
-        MonoBehaviour.print("isUserWatch event receiver");
+        MonoBehaviour.print(
+            "HandleRewardedAdRewarded event received for "
+                        + amount.ToString() + " " + type);
     }
+
     public void showRewardedAd()
     {
-        if (adRewarded.IsLoaded())
+        if (this.rewardedAd.IsLoaded())
         {
-            adRewarded.Show();
+            this.rewardedAd.Show();
         }
     }
 }

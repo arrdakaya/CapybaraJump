@@ -84,23 +84,18 @@ public class SlingShot : MonoBehaviour
 
         if (Input.touchCount > 0)
         {
-            
-
 
             Touch touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Began)
             {
                 RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position), Vector2.zero);
-                
 
                 if (hit.collider != null && hit.collider.tag == "Player")
                 {
                     isDrag = true;
-                    //ball.DesactiveRb();
                     trajectory.Show();
                     startPoint = cam.ScreenToWorldPoint(Input.GetTouch(0).position);
                     capybaraPos = capybara.transform.position;
-
                 }
 
             }
@@ -126,14 +121,11 @@ public class SlingShot : MonoBehaviour
                         rb.position = capybaraPos;
                     }
                 }
-
-                    
-                
-               
+ 
             }
-            if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended)
+            if (isDrag && (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended))
             {
-               
+
                 isShoot = true;
                 StartCoroutine("Release");
                 ResetStrips();
@@ -143,14 +135,12 @@ public class SlingShot : MonoBehaviour
                 capybara.GetComponent<SpriteRenderer>().sprite = skinManager.GetSelectedSkin().jumpSprite;
                 rb.isKinematic = false;
                 isDrag = false;
-                
             }
 
         }
     }
     public IEnumerator Release()
     {
-       
        
         if (capyNumber <= 2)
         {

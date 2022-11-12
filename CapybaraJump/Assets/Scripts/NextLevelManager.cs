@@ -1,14 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class NextLevelManager : MonoBehaviour
 {
+    public static NextLevelManager _instance;
+
     public TextMeshProUGUI levelText;
     private int buildIndex = 0;
-    // Start is called before the first frame update
+
+    void Awake()
+    {
+        if (_instance == null)
+        {
+            _instance = this;
+        }
+    }
     void Start()
     {
         buildIndex = SceneManager.GetActiveScene().buildIndex;
