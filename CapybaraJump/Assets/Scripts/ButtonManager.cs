@@ -32,4 +32,10 @@ public class ButtonManager : MonoBehaviour
         Time.timeScale = 1;
 
     }
+    public void ClothesSceneButton()
+    {
+        SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1;
+    }
+   
 }

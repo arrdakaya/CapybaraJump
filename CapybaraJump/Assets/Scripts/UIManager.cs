@@ -15,12 +15,22 @@ public class UIManager : MonoBehaviour
     public GameObject coin1;
     public GameObject earnedText;
     private bool isFinish;
+    public GameObject soundOn;
+    public GameObject soundClose;
+    public GameObject MenuScene;
 
     void Awake()
     {
         if (_instance == null)
         {
             _instance = this;
+        }
+    }
+    public void Start()
+    {
+        if(PlayerPrefs.HasKey("Sound") == false)
+        {
+            PlayerPrefs.SetInt("Sound", 1);
         }
     }
     public void FinishScreen()
@@ -62,5 +72,38 @@ public class UIManager : MonoBehaviour
         retryText.SetActive(false);
         coin1.SetActive(true);
         earnedText.SetActive(true);
+    }
+    public void PauseGame()
+    {
+       
+        MenuScene.SetActive(true);
+        if(PlayerPrefs.GetInt("Sound") == 1)
+        {
+            soundOn.SetActive(false);
+            soundClose.SetActive(true);
+            AudioListener.volume = 1;
+        }
+        else if(PlayerPrefs.GetInt("Sound") == 2)
+        {
+            soundOn.SetActive(true);
+            soundClose.SetActive(false);
+            AudioListener.volume = 0;
+
+        }
+       
+    }
+    public void Sound_Open()
+    {
+        soundOn.SetActive(true);
+        soundClose.SetActive(false);
+        AudioListener.volume = 0;
+        PlayerPrefs.SetInt("Sound", 2);
+    }
+    public void Sound_Close()
+    {
+        soundOn.SetActive(false);
+        soundClose.SetActive(true);
+        AudioListener.volume = 1;
+        PlayerPrefs.SetInt("Sound", 1);
     }
 }

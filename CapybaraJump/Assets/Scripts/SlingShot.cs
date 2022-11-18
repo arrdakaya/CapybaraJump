@@ -150,7 +150,7 @@ public class SlingShot : MonoBehaviour
             capybara.GetComponent<Ball>().enabled = false;
             this.GetComponent<SlingShot>().enabled = false;
 
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(4f);
             Destroy(capybara);
             this.GetComponent<SlingShot>().enabled = true;
             capybara.GetComponent<SpringJoint2D>().enabled = true;
