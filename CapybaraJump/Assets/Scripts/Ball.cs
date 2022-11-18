@@ -56,11 +56,7 @@ public void DesactiveRb()
             GetComponent<SpriteRenderer>().sprite = skinManager.GetSelectedSkin().sprite;
 
         }
-        if (collision.gameObject.CompareTag("Splash"))
-        {
-
-
-        }
+        
 
     }
 }

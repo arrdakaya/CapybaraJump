@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1496954382590530572}
   - component: {fileID: 1496954382590530573}
-  - component: {fileID: 1496954382590530563}
+  - component: {fileID: 8139263598196937373}
   - component: {fileID: 1496954382590530571}
   - component: {fileID: 1496954382590530575}
   - component: {fileID: 1496954382590530574}
@@ -91,7 +91,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1496954382590530563
+--- !u!61 &8139263598196937373
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,7 +104,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.012215257, y: 0.025120735}
+  m_Offset: {x: -0.034523964, y: -0.4295743}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -115,7 +115,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.9861295, y: 2.2226782}
+  m_Size: {x: 3.6144342, y: 1.7902626}
   m_EdgeRadius: 0
 --- !u!50 &1496954382590530571
 Rigidbody2D:
@@ -171,7 +171,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skinManager: {fileID: 11400000, guid: dfe24670cdd459643b46104e4bcc11e8, type: 2}
-  waterAnim: {fileID: 0}
   rb: {fileID: 1496954382590530571}
   col: {fileID: 0}
 --- !u!96 &1496954382590530561
@@ -285,6 +284,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df3274299aee4347bb7fc1639ccf02c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUp: 0
+  isDown: 0
+  isLeft: 0
+  isRight: 0
+  rb: {fileID: 0}
+  col: {fileID: 0}
 --- !u!95 &1496954382590530562
 Animator:
   serializedVersion: 4

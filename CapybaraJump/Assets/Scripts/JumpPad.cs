@@ -12,7 +12,7 @@ public class JumpPad : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             
-            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.one * jumpForce, ForceMode2D.Impulse);
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
            
         }
         

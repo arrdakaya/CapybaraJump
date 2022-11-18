@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5552534687253295289}
   - component: {fileID: 5552534687253295290}
   - component: {fileID: 5552534687253295291}
+  - component: {fileID: 179340854463778756}
   m_Layer: 0
   m_Name: AreaEffector
   m_TagString: Untagged
@@ -132,3 +133,17 @@ AreaEffector2D:
   m_ForceTarget: 0
   m_Drag: 0
   m_AngularDrag: 0
+--- !u!114 &179340854463778756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5552534687253295284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6f8be7721f14c14ab39e211e2e2da87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDragging: 0
+  lastPos: {x: 0, y: 0, z: 0}
