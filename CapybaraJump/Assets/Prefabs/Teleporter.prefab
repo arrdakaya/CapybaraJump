@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 5507475990902187604}
   - component: {fileID: 5507475990902187606}
   - component: {fileID: 5507475990902187602}
-  - component: {fileID: 6408970549077864428}
+  - component: {fileID: 5869793197974511724}
+  - component: {fileID: 3339248597315444419}
   m_Layer: 0
   m_Name: Teleporter
   m_TagString: Teleporter
@@ -116,7 +117,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.16177927, y: 0.06741067}
   m_Size: {x: 2.3963327, y: 5.281403}
   m_Direction: 0
---- !u!114 &6408970549077864428
+--- !u!114 &5869793197974511724
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,3 +131,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDragging: 0
   lastPos: {x: 0, y: 0, z: 0}
+--- !u!50 &3339248597315444419
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5507475990902187609}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4816631289807434361}
   - component: {fileID: 4816631289807434360}
-  - component: {fileID: 1691694977648797572}
+  - component: {fileID: 2039704660061127435}
+  - component: {fileID: 5691592575271985742}
+  - component: {fileID: 1980137331389542063}
   m_Layer: 0
   m_Name: Teleporter2
   m_TagString: Teleporter
@@ -85,7 +87,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1691694977648797572
+--- !u!50 &2039704660061127435
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4816631289807434365}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!70 &5691592575271985742
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4816631289807434365}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.31844243, y: -0.028948894}
+  m_Size: {x: 1.7204937, y: 5.3102083}
+  m_Direction: 0
+--- !u!114 &1980137331389542063
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
