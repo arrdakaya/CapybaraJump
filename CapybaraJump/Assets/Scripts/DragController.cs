@@ -8,6 +8,7 @@ public class DragController : MonoBehaviour
     private Vector2 screenPos;
     private Vector3 worldPos;
     private DragDrop lastDragged;
+    public bool isShouldMove;
     public DragDrop LastDragged => lastDragged;
 
     private void Awake()
@@ -21,6 +22,9 @@ public class DragController : MonoBehaviour
     }
     void Update()
     {
+       
+
+        
         if(isDrag && (Input.touchCount ==1 && Input.GetTouch(0).phase == TouchPhase.Ended))
         {
             endDrag();
@@ -73,4 +77,5 @@ public class DragController : MonoBehaviour
         isDrag = lastDragged.isDragging = isDragging;
         lastDragged.gameObject.layer = isDragging ? Layer.Dragging : Layer.Default;
     }
+    
 }

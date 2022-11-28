@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4528441201996434429}
-  - component: {fileID: 4528441201996434430}
+  - component: {fileID: 4954584097697963127}
   m_Layer: 0
   m_Name: collider (1)
   m_TagString: Untagged
@@ -108,7 +108,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4528441201996434428}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.04100376, w: 0.99915904}
   m_LocalPosition: {x: 2.88, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -116,8 +116,8 @@ Transform:
   m_Father: {fileID: 4528441202430437152}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &4528441201996434430
-BoxCollider2D:
+--- !u!70 &4954584097697963127
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -129,19 +129,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.563147, y: -1.171427}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.47856784, y: 3.1925817}
-  m_EdgeRadius: 0
+  m_Offset: {x: -1.4683405, y: -1.4342577}
+  m_Size: {x: 0.31114498, y: 3.1208146}
+  m_Direction: 0
 --- !u!1 &4528441202165434475
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,7 +141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4528441202165434476}
-  - component: {fileID: 4528441202165434477}
+  - component: {fileID: 689119698559217459}
   m_Layer: 0
   m_Name: collider
   m_TagString: Untagged
@@ -166,7 +156,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4528441202165434475}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.03411452, w: 0.99941796}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -174,8 +164,8 @@ Transform:
   m_Father: {fileID: 4528441202430437152}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &4528441202165434477
-BoxCollider2D:
+--- !u!70 &689119698559217459
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -187,19 +177,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.5568115, y: -1.1514163}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.49123883, y: 3.232603}
-  m_EdgeRadius: 0
+  m_Offset: {x: -1.6976707, y: -1.1559198}
+  m_Size: {x: 0.32390937, y: 3.1756814}
+  m_Direction: 0
 --- !u!1 &4528441202174342940
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,8 +206,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4528441202174342940}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 1.47, z: 0}
-  m_LocalScale: {x: 1.9059129, y: 3.8048, z: 1}
+  m_LocalPosition: {x: 0.124, y: 1.9, z: 0}
+  m_LocalScale: {x: 2.9614074, y: 5.911898, z: 1.554}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4528441202430437152}
@@ -534,7 +514,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.17740765, y: 0.24269463}
+  m_Offset: {x: -0.101784885, y: -0.05638981}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -545,7 +525,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.296067, y: 0.44438085}
+  m_Size: {x: 2.5271182, y: 0.6984556}
   m_EdgeRadius: 0
 --- !u!114 &4528441202526084591
 MonoBehaviour:

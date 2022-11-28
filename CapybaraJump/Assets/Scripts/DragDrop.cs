@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class DragDrop : MonoBehaviour
 {
+    public bool isCheck;
     public bool isDragging;
     public Vector3 lastPos;
     private Collider2D _collider;
@@ -18,7 +19,10 @@ public class DragDrop : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if (isCheck)
+        {
 
+       
             if (movementDestination.HasValue)
             {
            
@@ -41,7 +45,7 @@ public class DragDrop : MonoBehaviour
                 }
             
             }
-
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)

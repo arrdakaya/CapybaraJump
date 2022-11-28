@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 134701744376757036}
   - component: {fileID: 134701744376757039}
-  - component: {fileID: 134701744376757037}
   - component: {fileID: 134701744376757034}
   - component: {fileID: 134701744376757030}
   - component: {fileID: 134701744376757035}
+  - component: {fileID: 6796207244090160238}
   m_Layer: 0
   m_Name: JumpPad
   m_TagString: Untagged
@@ -88,19 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &134701744376757037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 134701744376757009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1cd3bdecb8441b40ade01711e4ae58f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpForce: 10
 --- !u!114 &134701744376757034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,10 +112,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0019205809, y: -0.017059892}
+  m_Offset: {x: 0.0060521364, y: -0.040377863}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -139,7 +126,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.57984, y: 0.39362377}
+  m_Size: {x: 2.8721774, y: 0.34698784}
   m_EdgeRadius: 0
 --- !u!50 &134701744376757035
 Rigidbody2D:
@@ -162,3 +149,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!253 &6796207244090160238
+BuoyancyEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134701744376757009}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 2147483647
+  m_SurfaceLevel: 0
+  m_Density: 200
+  m_LinearDrag: 5
+  m_AngularDrag: 5
+  m_FlowAngle: 0
+  m_FlowMagnitude: 0
+  m_FlowVariation: 0

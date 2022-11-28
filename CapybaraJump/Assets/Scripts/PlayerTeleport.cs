@@ -12,6 +12,7 @@ public class PlayerTeleport : MonoBehaviour
     [SerializeField] bool isRight;
     [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public BoxCollider2D col;
+    public int power = 13;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,13 +26,13 @@ public class PlayerTeleport : MonoBehaviour
             transform.position = currentTeleporter.GetComponent<Teleport>().GetDestination().transform.position;
             
             if(isUp)
-                rb.velocity = Vector3.up *  10;
+                rb.velocity = Vector3.up * power;
             if (isDown)
-                rb.velocity = Vector3.down * 10;
+                rb.velocity = Vector3.down * power;
             if (isLeft)
-                rb.velocity = Vector3.left * 10;
+                rb.velocity = Vector3.left * power;
             if (isRight)
-                rb.velocity = Vector3.right * 10;
+                rb.velocity = Vector3.right * power;
         }
         
             

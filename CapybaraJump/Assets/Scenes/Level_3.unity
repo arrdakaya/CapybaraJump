@@ -6172,6 +6172,7 @@ MonoBehaviour:
   capybara: {fileID: 1959445744619839991}
   playerPos: {fileID: 482932085}
   capyParent: {fileID: 1452354018}
+  destroyTime: 4
   skinManager: {fileID: 11400000, guid: dfe24670cdd459643b46104e4bcc11e8, type: 2}
   rb: {fileID: 1959445744619839988}
   hook: {fileID: 469303221}
